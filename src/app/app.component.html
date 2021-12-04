@@ -1,0 +1,66 @@
+<router-outlet></router-outlet>
+<br>
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>SENAI</mat-label>
+      <input matInput disabled value="Jansen">
+  </mat-form-field>
+
+  <table class="example-full-width" cellspacing="0">
+      <tr>
+          <td>
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Digite aqui seu Nome:</mat-label>
+                  <input matInput>
+              </mat-form-field>
+          </td>
+          <td>
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Digite aqui seu sobrenome:</mat-label>
+                  <input matInput>
+              </mat-form-field>
+          </td>
+      </tr>
+  </table>
+
+  <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Endereço</mat-label>
+          <textarea matInput placeholder="Ex: Rua Jeronimo Teles Junior, 125">-----</textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Complemento</mat-label>
+          <textarea matInput></textarea>
+      </mat-form-field>
+  </p>
+
+  <table class="example-full-width" cellspacing="0">
+      <tr>
+          <td>
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Cidade</mat-label>
+                  <input matInput placeholder="Osasco">
+              </mat-form-field>
+          </td>
+          <td>
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>UF</mat-label>
+                  <input matInput placeholder="São Paulo">
+              </mat-form-field>
+          </td>
+          <td>
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>CEP</mat-label>
+                  <input matInput #postalCode maxlength="9" placeholder="Ex: 06020-194" value="94043-000">
+                  <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+              </mat-form-field>
+          </td>
+      </tr>
+  </table>
+</form>
+
+
+<br>
+<a [routerLink]="['/site1']">Primeira derivação do Site!</a>
+<br>
+<a [routerLink]="['/site2']">Segunda derivação do meu site!</a>
